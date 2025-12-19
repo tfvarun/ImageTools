@@ -1,0 +1,14 @@
+node_modules/
+uploads/
+output/
+client/node_modules/
+client/build/
+.env
+.DS_Store
+*.log
+
+
+
+
+
+.vercel

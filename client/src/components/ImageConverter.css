@@ -1,0 +1,148 @@
+.converter-page {
+  padding: 40px 0;
+  min-height: calc(100vh - 70px);
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.page-header h1 {
+  font-size: 42px;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.page-header p {
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+.section-description {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.preview-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.file-info {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.upload-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.upload-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.upload-hint {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.conversion-options {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.conversion-options .input-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.predefined-conversions {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.conversion-card {
+  background-color: var(--bg-secondary);
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.conversion-card:hover {
+  transform: translateY(-3px);
+}
+
+.conversion-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.conversion-from,
+.conversion-to {
+  padding: 8px 16px;
+  border-radius: 6px;
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.conversion-arrow {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 24px;
+}
+
+.conversion-card .btn {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 32px;
+  }
+
+  .conversion-options {
+    flex-direction: column;
+  }
+
+  .conversion-options .input-group {
+    width: 100%;
+  }
+
+  .predefined-conversions {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+

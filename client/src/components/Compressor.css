@@ -1,0 +1,219 @@
+.compressor-page {
+  padding: 40px 0;
+  min-height: calc(100vh - 70px);
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.page-header h1 {
+  font-size: 42px;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.page-header p {
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+.section-description {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.preview-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.file-info {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.compression-options {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.compression-options .input-group {
+  width: 100%;
+  max-width: 520px;
+  text-align: center;
+}
+
+.quality-slider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 520px;
+}
+
+.slider-track { display: none; }
+
+/* Progress is rendered via gradient on the input/track */
+
+.quality-slider input[type="range"] {
+  width: 100%;
+  height: 8px;
+  border-radius: 12px;
+  background: transparent;
+  outline: none;
+  position: relative;
+  z-index: 2;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.quality-slider input[type="range"]::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 12px;
+  background: linear-gradient(to right,
+    var(--color-primary) 0%,
+    var(--color-primary) var(--percent),
+    rgba(128, 128, 128, 0.40) var(--percent),
+    rgba(128, 128, 128, 0.40) 100%);
+  border: none;
+  box-shadow: 0 0 0 2px rgba(57, 132, 250, 0.20);
+}
+
+.quality-slider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  border: 2px solid var(--bg-card);
+  margin-top: -5px;
+}
+
+.quality-slider input[type="range"]::-moz-range-track {
+  height: 8px;
+  border-radius: 12px;
+  background: linear-gradient(to right,
+    var(--color-primary) 0%,
+    var(--color-primary) var(--percent),
+    rgba(128, 128, 128, 0.40) var(--percent),
+    rgba(128, 128, 128, 0.40) 100%);
+  border: none;
+  box-shadow: 0 0 0 2px rgba(57, 132, 250, 0.20);
+}
+
+.quality-slider input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  border: 2px solid var(--bg-card);
+}
+
+.slider-label {
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -120%);
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: 12px;
+  box-shadow: none;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.mode-group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 6px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  box-shadow: 0 2px 6px var(--shadow);
+}
+
+.mode-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.mode-group label:has(input:checked) {
+  background-color: var(--text-primary);
+  color: var(--bg-card);
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.mode-group input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.text-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.actions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.size-readout {
+  margin-top: 10px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.upload-hint {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 32px;
+  }
+  .compression-options { flex-direction: column; }
+  .compression-options .input-group { width: 100%; }
+}
+.quality-slider input[type="range"]::-ms-track {
+  height: 8px;
+  border-radius: 12px;
+  background: transparent;
+  border: none;
+  color: transparent;
+}

@@ -1,0 +1,145 @@
+.App {
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  transition: background-color 0.3s ease;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: var(--gradient);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--gradient-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+.btn-secondary {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--border-color);
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 6px var(--shadow);
+  margin-bottom: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.upload-area {
+  border: 3px dashed var(--border-color);
+  border-radius: 12px;
+  padding: 60px 20px;
+  text-align: center;
+  background-color: var(--bg-card);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.upload-area:hover {
+  border-color: #5865F2;
+  background-color: var(--bg-secondary);
+  box-shadow: 0 0 0 2px rgba(88, 101, 242, 0.2);
+}
+
+.upload-area.dragover {
+  border-color: #5865F2;
+  background-color: var(--bg-secondary);
+  box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.3);
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: #5865F2;
+  box-shadow: 0 0 0 2px rgba(88, 101, 242, 0.2);
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-primary);
+}
+
+.error {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #EF4444;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.success {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #10B981;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+
+

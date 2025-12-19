@@ -1,0 +1,13 @@
+-Help me build a full end-to-end web application that allows users to upload files and perform various file conversions. 
+
+-Specifically, I want the website to support converting images from PNG to JPEG , JPEG to PNG, webp to png ,jfif to png, png to svg, heic to jpg , heic to png and also there should be a section name image convertor and when the user uploads a file there it shows all the options to convert from the image format provided to any other ( you can refer to website freeconvert.com/image-convertor ) 
+
+It should also have a resizing section and cropping section -
+  resize section should png resizers , jpg resizer , bulk resizer, webp resizers 
+  crop section  should png crop , jpg crop ,webp crop, crop ( for all file formats)
+
+Please generate the frontend and backend code needed for this functionality, and use a user-friendly interface where users can upload files, choose their conversion options, and then download the converted results. Use standard web technologies and any libraries you find appropriate.
+
+the color theme for the website should be -- #778873 , --#A1BC98 , -- #D2DCB6, -- #F1F3E0
+
+also include to section teaching users how to convert their images 
