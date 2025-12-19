@@ -14,9 +14,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve raw assets for frontend (logos, images)
-app.use('/assets', express.static(path.join(__dirname, 'client', 'assets')));
-
 // Create uploads directory if it doesn't exist
 const uploadsDir = path.join(__dirname, 'uploads');
 const outputDir = path.join(__dirname, 'output');
@@ -425,20 +422,4 @@ app.post('/api/compress-preview', upload.single('file'), async (req, res) => {
   }
 });
 
-// Serve static files from React app
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'client/build')));
-  
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-  });
-}
-
-// Export the app for serverless environments (e.g., Vercel)
-if (process.env.VERCEL) {
-  module.exports = app;
-} else {
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-  });
-}
+module.exports = app;

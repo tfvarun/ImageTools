@@ -1,15 +1,32 @@
 {
   "version": 2,
+
   "builds": [
-    { "src": "client/package.json", "use": "@vercel/static-build", "config": { "distDir": "build" } },
-    { "src": "server.js", "use": "@vercel/node" }
+    {
+      "src": "client/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "buildCommand": "npm run build",
+        "distDir": "build"
+      }
+    },
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
   ],
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/server.js" },
-    { "source": "/assets/(.*)", "destination": "/server.js" },
-    { "source": "/(.*)", "destination": "/client/build/index.html" }
-  ],
-  "env": {
-    "CI": "false"
-  }
+
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/server.js"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
 }

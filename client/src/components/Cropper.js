@@ -176,7 +176,7 @@ const Cropper = () => {
       };
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isDragging, isMoving, isResizing, dragStart, preview, cropArea, activeHandle]);
+  }, [isDragging, isMoving, isResizing, dragStart, preview, cropArea, activeHandle, zoom, imageDimensions, moveStart]);
 
   const handleCrop = async () => {
     if (!file) {
