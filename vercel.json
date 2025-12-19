@@ -8,5 +8,8 @@
     { "source": "/api/(.*)", "destination": "/server.js" },
     { "source": "/assets/(.*)", "destination": "/server.js" },
     { "source": "/(.*)", "destination": "/client/build/index.html" }
-  ]
+  ],
+  "env": {
+    "CI": "false"
+  }
 }

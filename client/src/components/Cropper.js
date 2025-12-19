@@ -175,6 +175,7 @@ const Cropper = () => {
         window.removeEventListener('mouseup', handleMouseUpWrapper);
       };
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isDragging, isMoving, isResizing, dragStart, preview, cropArea, activeHandle]);
 
   const handleCrop = async () => {

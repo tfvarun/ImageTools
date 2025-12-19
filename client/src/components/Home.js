@@ -60,7 +60,7 @@ const Home = () => {
           <div className="features-grid">
             <div className="feature-card">
               <div className="feature-icon">
-                <img src="/assets/icon/convert.gif" alt="Image Conversion" className="feature-icon-img" />
+                <img src="/assets/icon/convert.gif" alt="Conversion" className="feature-icon-img" />
               </div>
               <h3>Image Conversion</h3>
               <p>Convert between PNG, JPEG, WebP, HEIC, JFIF, and SVG formats with high quality preservation.</p>
@@ -68,7 +68,7 @@ const Home = () => {
             </div>
             <div className="feature-card">
               <div className="feature-icon">
-                <img src="/assets/icon/resize.gif" alt="Image Resizing" className="feature-icon-img" />
+                <img src="/assets/icon/resize.gif" alt="Resizing" className="feature-icon-img" />
               </div>
               <h3>Image Resizing</h3>
               <p>Resize single or multiple images with precise dimensions. Maintain aspect ratio or customize freely.</p>
@@ -76,7 +76,7 @@ const Home = () => {
             </div>
             <div className="feature-card">
               <div className="feature-icon">
-                <img src="/assets/icon/crop.gif" alt="Image Cropping" className="feature-icon-img" />
+                <img src="/assets/icon/crop.gif" alt="Cropping" className="feature-icon-img" />
               </div>
               <h3>Image Cropping</h3>
               <p>Crop images with pixel-perfect precision. Select the exact area you want to keep.</p>
