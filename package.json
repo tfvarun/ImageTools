@@ -2,12 +2,12 @@
   "name": "image-conversion-app",
   "version": "1.0.0",
   "description": "Full-stack image conversion, resizing, and cropping application",
-  "main": "server.js",
+  "main": "api/index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
+    "start": "node api/index.js",
+    "dev": "nodemon api/index.js",
     "client": "cd client && npm start",
-    "build": "cd client && npm run build",
+    "build": "cd client && npm install && npm run build",
     "install-client": "cd client && npm install"
   },
   "keywords": ["image", "conversion", "resize", "crop"],
